@@ -20,14 +20,18 @@ public class Main {
 
         // 장르 필터 Iterator 테스트 // 이터레이터 이름 수정, 출력 수정
         Iterator <Book> itg = bookShelf.iteratorByGenre("소설");
+        System.out.println("[장르 필터 Iterator 테스트]");
         while(itg.hasNext()) {
-            System.out.println(itg.next().getName());
+            Book book = itg.next();
+            System.out.printf("%s | %s | %d | %.0f%n", book.getName(), book.getGenre(), book.getYear(), book.getPrice());
         }
 
         // 출판연도 역순 Iterator 테스트 // 이터레이터 이름 수정, 출력 수정
         Iterator <Book> ity = bookShelf.iteratorByYear();
+        System.out.println("[출판연도 역순 Iterator 테스트]");
         while(ity.hasNext()) {
-            System.out.println(ity.next().getName());
+            Book book = ity.next();
+            System.out.printf("%s | %s | %d | %.0f%n", book.getName(), book.getGenre(), book.getYear(), book.getPrice());
         }
     }
 }
