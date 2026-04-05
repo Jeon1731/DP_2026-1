@@ -8,6 +8,8 @@ import hw.ch04.license.LicenseCardFactory;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("학번: 20230887, 이름: 전유정");
+        
         // Step 1 테스트: IDCard 정보 확장
         Factory factory = new IDCardFactory("2026-03-20");
         Product card1 = factory.create("Kim Youngjin");
