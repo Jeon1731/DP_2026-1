@@ -2,6 +2,8 @@ package hw.ch05;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("\"학번: 20230887, 이름: 전유정\"");
+
         Main1.start(); // LoggerStaticInit
         Main2.start(); // LoggerSynchronizedLazy
         Main3.start(); // LoggerEnum
