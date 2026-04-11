@@ -30,7 +30,7 @@ public class MessageBox implements Product {
     public Product createCopy() {
         Product p = null;
         try {
-            p = (Product)clone(); // P: Product type, clone(): Object type => 부모를 자식에 대입 불가능
+            p = (Product)clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
