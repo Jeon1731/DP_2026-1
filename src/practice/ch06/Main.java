@@ -1,11 +1,48 @@
 package practice.ch06;
 
+import practice.ch06.framework.Manager;
+import practice.ch06.framework.Product;
+
 public class Main {
     public static void main(String[] args) {
-        MessageBox mbox1 = new MessageBox('@');
+        /*
+        // 원본(prototype)이 일을 함
+        MessageBox mbox1 = new MessageBox('*');
         mbox1.use("Hello, world.");
 
+        // 복제된 객체가 일을 함
         mbox1.createCopy().use("Hello, world.");
-        // mbox1.clone(); // clone() 메소드는 자신의 클래스 및 하위 클래서에서만 호출 가능
+        // mbox1.clone(); // clone() 메소드는 자신의 클래스 및 하위 클래스에서만 호출 할 수 있다.
+
+        // 원본(prototype)이 일을 함
+        UnderlinePen upen1 = new UnderlinePen('+');
+        upen1.use("Hello, world.");
+
+        // 복제된 객체가 일을 함
+        upen1.createCopy().use("Hello, world.");
+         */
+
+        // Manager를 이용하는 코드
+
+        // 준비
+        Manager manager = new Manager();
+        MessageBox mbox1 = new MessageBox('+');
+        MessageBox mbox2 = new MessageBox('/');
+        UnderlinePen upen1 = new UnderlinePen('+');
+
+        // 등록
+        manager.register("star message", mbox1);
+        manager.register("pluse line", upen1);
+        manager.register("slash box", mbox2);
+
+        // 등록한 이름으로 복제품을 얻어서 사용
+        Product p1 = manager.create("star box");
+        p1.use("Hello, world.");
+
+        Product p2 = manager.create("plus line");
+        p2.use("Hello, world.");
+
+        Product p3 = manager.create("slash box");
+        p3.use("Hello, world.");
     }
 }
