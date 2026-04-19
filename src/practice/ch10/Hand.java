@@ -40,7 +40,11 @@ public enum Hand {
 
     // 무승부는 0, this가 이기면 1, h가 이기면 -1
     private int fight(Hand h) {
+<<<<<<< HEAD
         if (this == h) { // 객체 주소가 동일한 지 비교 => 같은 객체인지 비교
+=======
+        if (this == h) {
+>>>>>>> e24812565cf58e69af81de89c2147eb73c890aae
             return 0;
         } else if ((this.handvalue + 1) % 3 == h.handvalue) {
             return 1;

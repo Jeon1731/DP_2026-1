@@ -18,11 +18,19 @@ public class Main {
          */
 
         // 플레이어 2명 만들기
+<<<<<<< HEAD
         Player player1 = new Player("최승훈", new ProbStrategy(114));
         Player player2 = new Player("손흥민", new WinningStrategy(15));
 
         // 게임 시키기
         for(int i = 0; i < 1000; i++) {
+=======
+        Player player1 = new Player("최승훈", new WinningStrategy(114));
+        Player player2 = new Player("손흥민", new WinningStrategy(15));
+
+        // 게임 시키기
+        for(int i = 0; i < 10; i++) {
+>>>>>>> e24812565cf58e69af81de89c2147eb73c890aae
             // 플레이어 2명에서 각각 손을 얻음
             Hand h1 = player1.nextHand();
             Hand h2 = player2.nextHand();
@@ -42,9 +50,12 @@ public class Main {
                 player2.even();
             }
         }
+<<<<<<< HEAD
 
         System.out.println("total result:");
         System.out.println(player1); // toString() 자동 호출
         System.out.println(player2);
+=======
+>>>>>>> e24812565cf58e69af81de89c2147eb73c890aae
     }
 }
