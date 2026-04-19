@@ -5,6 +5,8 @@ import hw.ch06.framework.Manager;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("학번: 20230887, 이름: 전유정");
+
         // 준비
         Manager manager = new Manager();
         UnderlinePen upen = new UnderlinePen('-');
