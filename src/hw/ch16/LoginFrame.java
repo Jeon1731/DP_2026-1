@@ -105,7 +105,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
             // OK 버튼 활성화
             statusLabel.setColleagueEnabled(true);
         } else {
-            // OK 버튼 활성화
+            // OK 버튼 비활성화
             statusLabel.setColleagueEnabled(false);
         }
     }
